@@ -1,0 +1,39 @@
+﻿@model IEnumerable<PlaceToBe.Core.Data.Models.Restaurant>
+@{
+}
+
+<h3 class="justify-content-center">  Les restaurants</h3> 
+
+<div class="container">
+    <div class="row">
+        @foreach (var restaurant in Model)
+        {
+
+
+
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="@restaurant.ImageLink" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">@restaurant.Nom</h5>
+                        <p class="card-text">@restaurant.Genre</p>
+
+                        <div class="row">
+                            <div class="col">
+                                <p class="card-text">@restaurant.PrixMoyen</p>
+                            </div>
+                            <div class="col">
+                                <button type="button" class="btn btn-outline-success">Voter</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+            </div>
+
+        }
+
+    </div>
+
+</div>
